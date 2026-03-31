@@ -115,17 +115,20 @@ docker run --name my_emotion_container emotion-app-image
 ## 📊 Visual Previews & Screenshots
 
 ### Standard Native GUI (Client View)
-
 The localized desktop interface where users provide text block payloads.
+![Application UI](app_ui.png)
 
 ### Model Probability Output
-
 Active text classification running post-inference calculation.
+![Classified Emotion](user_ui_detected.png)
+
+### Developer Mode & Diagnostics
+Extended view detailing the backend processing and training diagnostics.
+![Developer Mode](developer_mode.png)
 
 ### Virtualized Runtime
-
 The application running smoothly in a headless Linux environment.
-
+![Docker Build Output](docker_output.png)
 -----
 
 ## 📄 Licensing & Open Source
