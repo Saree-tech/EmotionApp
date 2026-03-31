@@ -114,22 +114,19 @@ docker run --name my_emotion_container emotion-app-image
 
 ## 📊 Visual Previews & Screenshots
 
+The localized desktop interface where users provide text block payloads, detailed backend diagnostics, and virtualized execution.
+
 ### Standard Native GUI (Client View)
-The localized desktop interface where users provide text block payloads.
-![Application UI](app_ui.png)
+<img src="app_ui.png" alt="Application UI" width="550"/>
 
 ### Model Probability Output
-Active text classification running post-inference calculation.
-![Classified Emotion](user_ui_detected.png)
+<img src="user_ui_detected.png" alt="Classified Emotion" width="550"/>
 
 ### Developer Mode & Diagnostics
-Extended view detailing the backend processing and training diagnostics.
-![Developer Mode](developer_mode.png)
+<img src="developer_mode.png" alt="Developer Mode" width="550"/>
 
 ### Virtualized Runtime
-The application running smoothly in a headless Linux environment.
-![Docker Build Output](docker_output.png)
------
+<img src="docker_output.png" alt="Docker Build Output" />-----
 
 ## 📄 Licensing & Open Source
 
@@ -148,5 +145,4 @@ This project is released and licensed under the **Apache License, Version 2.0**.
 
 *Maintained and optimized with .NET 8.0 and ML.NET*
 
-```
 ```
