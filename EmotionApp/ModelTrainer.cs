@@ -60,4 +60,6 @@ namespace EmotionApp
             Console.WriteLine($"Model successfully saved to: {modelPath}");
         }
     }
+
+
 }

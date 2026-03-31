@@ -96,9 +96,9 @@
             btnDevMode.FlatStyle = FlatStyle.Flat;
             btnDevMode.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDevMode.ForeColor = Color.Gray;
-            btnDevMode.Location = new Point(35, 367);
+            btnDevMode.Location = new Point(35, 356);
             btnDevMode.Name = "btnDevMode";
-            btnDevMode.Size = new Size(150, 30);
+            btnDevMode.Size = new Size(173, 38);
             btnDevMode.TabIndex = 5;
             btnDevMode.Text = "Developer Mode";
             btnDevMode.UseVisualStyleBackColor = false;

@@ -1,5 +1,5 @@
-﻿# 1. Use the official Linux .NET SDK image to build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+﻿# 1. Use the official Microsoft .NET SDK image to build the app
+FROM mcr.microsoft.com/dotnet/sdk:8.0-windowsservercore-ltsc2022 AS build
 WORKDIR /src
 
 # 2. Copy the project file directly from the current folder
@@ -8,16 +8,12 @@ RUN dotnet restore "EmotionApp.csproj"
 
 # 3. Copy everything else in the current folder and build
 COPY . .
-RUN dotnet build "EmotionApp.csproj" -c Release -o /app/build
-
-# 4. Publish the application
-FROM build AS publish
 RUN dotnet publish "EmotionApp.csproj" -c Release -o /app/publish
 
-# 5. Use the lightweight Linux Runtime to run the background tasks
-FROM mcr.microsoft.com/dotnet/runtime:8.0 AS final
+# 4. Use the Windows Runtime to run the app
+FROM mcr.microsoft.com/dotnet/runtime:8.0-windowsservercore-ltsc2022 AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app/publish .
 
-# 6. Run the app
+# 5. Run the app
 ENTRYPOINT ["dotnet", "EmotionApp.dll"]
